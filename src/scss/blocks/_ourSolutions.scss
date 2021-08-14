@@ -1,0 +1,48 @@
+.ourSolutions .subtitle {
+    text-transform: uppercase;
+    color: #37BDBD;
+    font-size: 13px;
+}
+
+.ourSolutions ul {
+    margin: 0;
+    padding: 0;
+}
+.ourSolutions ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+.ourSolutions ul li, .ourSolutions .cardsGrid h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.ourSolutions .cardsGrid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 15px 15px; 
+    grid-template-areas: 
+      ". ."
+      ". ."; 
+    border-radius: 10px;
+  }
+
+.ourSolutions .card {
+    font-size: 15px;
+    padding: 20px 15px;
+    border: none;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+.ourSolutions .card a{
+    text-align: right;
+}
+
+.ourSolutions .card img{
+    margin-bottom: 30px;
+}
+
+.ourSolutions .card h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}

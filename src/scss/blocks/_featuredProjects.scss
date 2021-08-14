@@ -1,0 +1,55 @@
+.featuredProjects {
+    margin-top: 210px;
+}
+
+.featuredProjects .project {
+    display: flex;
+}
+
+.featuredProjects .highlight {
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+    
+.highlight::before {
+    content: "";
+    background-color: #49e8d1;
+    position: absolute;
+    width: 75%;
+    height: 15px;
+    left: -2px;
+    bottom: -3px;
+    z-index: -10;
+    
+}
+
+.featuredProjects .inverted-order {
+    flex-direction: row-reverse;
+}
+
+.featuredProjects .project .highlit::after {
+    display: absolute;
+    right: 75%;
+    left: 0;
+    top: 4px;
+    background-color: #49E8D1;
+    height: 10px;
+}
+
+.featuredProjects .project .thumbnail {
+    background-size: cover;
+}
+
+.featuredProjects .project .thumbnail, .featuredProjects .project .details {
+    flex-basis: 50%;
+}
+
+.featuredProjects .project .details {
+    padding: 170px 70px;
+}
+
+.featuredProjects .project .details p{
+    max-width: 500px;
+    font-size: 20px;
+}
