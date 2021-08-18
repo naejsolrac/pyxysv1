@@ -151,6 +151,54 @@ if( function_exists('acf_add_local_field_group') ):
     ));
 
     acf_add_local_field_group(array(
+        'key' => 'group_611d2c3a10b71',
+        'title' => 'Thumbnail da Listagem',
+        'fields' => array(
+            array(
+                'key' => 'field_611d2c504d004',
+                'label' => 'Imagem',
+                'name' => 'thumbnail_listagem',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'min_width' => 392,
+                'min_height' => 261,
+                'min_size' => '',
+                'max_width' => 392,
+                'max_height' => 261,
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'side',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+    
+    acf_add_local_field_group(array(
         'key' => 'group_611c7a3d4e4e2',
         'title' => 'Contatos Rodapé',
         'fields' => array(

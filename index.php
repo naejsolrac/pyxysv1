@@ -156,14 +156,21 @@
             
             <?php 
             $posts = [1,2,3,4,5];
-            foreach ($posts AS $post): ?>
+            $recent_posts = wp_get_recent_posts(array(
+                'numberposts' => 4, // Number of recent posts thumbnails to display
+                'post_status' => 'publish' // Show only the published posts
+            ));
+            foreach ($recent_posts AS $post): 
+                $thumbnail_listagem = get_field('thumbnail_listagem', $post['ID']);
+                $categoryLink = get_category_link( get_the_category($post['ID'])[0]->term_id );
+            ?>
             
-            <div class="post" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/images/post1.jpg' ?>');">
+            <!-- <div class="post" style="background-image: url('<?php echo get_template_directory_uri() . '/assets/images/post1.jpg' ?>');"> -->
+            <div class="post" style="background-image: url('<?php echo $thumbnail_listagem; ?>');">
                 <div class="details">
-                    <a href="" class="category">Categoria</a>
-                    <h4>Título completo de chamada para os posts</h4>
-                    <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturDuis aute irure dolor
-                        in reprehenderit </a>
+                    <a href="<?php echo $categoryLink; ?>" class="category"><?php echo get_the_category($post['ID'])[0]->name; ?></a>
+                    <h4><?php echo $post['post_title']; ?></h4>
+                    <p><a href="<?php echo get_post_permalink( $post['ID'] ); ?>"><?php echo $post['post_excerpt']; ?></a>
                     </p>
                 </div>
             </div>
