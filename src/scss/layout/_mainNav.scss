@@ -1,0 +1,78 @@
+.mainNav {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 99;
+}
+
+.mainNav, .mainNav .logo, .mainNav .navBg {
+    transition: .3s;
+}
+
+.mainNav-white {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 100px rgba(0, 0, 0, 0.1) ; 
+}
+
+.mainNav .logo-white {
+    display: inline-block;
+}
+
+.mainNav .logo-dark {
+    display: none;
+}
+
+.mainNav .show {
+    display: inline-block;
+}
+
+.mainNav .hide {
+    display: none;
+}
+
+.mainNav nav {
+    position: relative;
+}
+
+.mainNav .navButton {
+    width: 57px;
+    height: 57px;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: -15px;
+}
+
+.mainNav .navBg {
+    position: absolute;
+    top: -445px;
+    right: -675px;
+    width: 853px;
+    height: 853px;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 90px;
+    z-index: -99;
+    transform: translateX(120px);
+}
+
+.mainNav .animate-moveLeft {
+    animation-name: moveLeft;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+    animation-direction: normal;
+}
+
+.mainNav .animate-moveUp {
+    animation-name: moveUp;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+    animation-direction: normal;
+}

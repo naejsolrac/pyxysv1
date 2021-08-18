@@ -1,0 +1,17 @@
+@keyframes highlight {
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes moveLeft {
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveUp {
+    to {
+        transform: translateY(-190px);
+    }
+}

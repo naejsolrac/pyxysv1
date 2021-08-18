@@ -17,6 +17,7 @@
     "sass": "^1.37.5"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "bootstrap": "^4.6.0"
   }
 }

@@ -1,6 +1,6 @@
-.featuredProjects {
-    margin-top: 210px;
-}
+// .featuredProjects {
+//     margin-top: 210px;
+// }
 
 .featuredProjects .project {
     display: flex;
@@ -16,12 +16,20 @@
     content: "";
     background-color: #49e8d1;
     position: absolute;
-    width: 75%;
+    width: 10%;
     height: 15px;
     left: -2px;
     bottom: -3px;
     z-index: -10;
-    
+}
+
+.animatedHighlight::before {
+    animation-name: highlight;
+    animation-duration: .3s;
+    animation-delay: .4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.09, 0.95);
 }
 
 .featuredProjects .inverted-order {
